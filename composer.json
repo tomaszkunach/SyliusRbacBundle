@@ -1,5 +1,5 @@
 {
-    "name": "sylius/rbac-bundle",
+    "name": "admin-platform/rbac-bundle",
     "type": "symfony-bundle",
     "description": "Symfony2 Role-Based-Access-Control",
     "keywords": ["security", "rbac", "roles", "permissions"],
