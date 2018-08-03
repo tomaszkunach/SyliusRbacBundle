@@ -29,6 +29,7 @@
         <parameter key="sylius.permission_map.default.class">Sylius\Component\Rbac\Authorization\PermissionMap</parameter>
         <parameter key="sylius.permission_map.cached.class">Sylius\Component\Rbac\Authorization\CachedPermissionMap</parameter>
         <parameter key="sylius.rbac.initializer.class">Sylius\Bundle\RbacBundle\Doctrine\RbacInitializer</parameter>
+        <parameter key="sylius.rbac.command.initialize.class">Sylius\Bundle\RbacBundle\Command\InitializeCommand</parameter>
     </parameters>
 
     <services>
@@ -79,6 +80,23 @@
             <argument type="service" id="sylius.repository.role" />
             <argument type="service" id="sylius.resource_registry" />
         </service>
+
+        <service id="sylius.command.initialize" class="%sylius.rbac.command.initialize.class%">
+            <argument>null</argument>
+            <argument type="service" id="sylius.rbac.initializer" />
+            <tag name="console.command" />
+        </service>
+
+        <service id="sylius.rbac.form_type.permission_entity" class="Sylius\Bundle\RbacBundle\Form\Type\PermissionEntityType">
+            <argument>%sylius.model.permission.class%</argument>
+            <tag name="form.type"/>
+        </service>
+
+        <service id="sylius.rbac.form_type.role_entity" class="Sylius\Bundle\RbacBundle\Form\Type\RoleEntityType">
+            <argument>%sylius.model.role.class%</argument>
+            <tag name="form.type"/>
+        </service>
+        
     </services>
 
 </container>
