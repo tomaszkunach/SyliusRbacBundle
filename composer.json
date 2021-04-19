@@ -22,7 +22,6 @@
     "require": {
         "php": "^7.1",
 
-        "doctrine/doctrine-cache-bundle": "~1.0",
         "admin-platform/rbac": "^1.0",
         "sylius/resource-bundle": "^1.0",
         "symfony/framework-bundle": "^3.2|^4.0|^5.0"
