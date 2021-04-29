@@ -65,6 +65,19 @@ class SyliusRbacExtension extends AbstractResourceExtension implements PrependEx
     public function prepend(ContainerBuilder $container)
     {
         $this->prependSyliusResource($container);
+        $this->prependSyliusResource($container);
+    }
+
+    /**
+     * @param ContainerBuilder $container
+     */
+    private function prependDoctrineCache(ContainerBuilder $container)
+    {
+        $container->prependExtensionConfig('framework', [
+            'providers' => [
+                'sylius_rbac' => '%sylius.cache%',
+            ],
+        ]);
     }
 
     /**

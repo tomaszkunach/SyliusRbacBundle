@@ -61,5 +61,7 @@ EOT
 
         $this->rbacInitializer->initialize($output);
         $output->writeln('<info>Completed!</info>');
+
+        return 0;
     }
 }
