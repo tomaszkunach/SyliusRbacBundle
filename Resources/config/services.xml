@@ -18,6 +18,7 @@
 
     <imports>
         <import resource="services/form.xml" />
+        <import resource="services/cache_provider.xml" />
     </imports>
 
     <parameters>
@@ -62,7 +63,7 @@
 
         <service id="sylius.permission_map.cached" class="%sylius.permission_map.cached.class%">
             <argument type="service" id="sylius.permission_map.default" />
-            <argument type="service" id="doctrine_cache.providers.sylius_rbac" />
+            <argument type="service" id="sylius.rbac.permissions_cache_provider" />
         </service>
 
         <service id="sylius.rbac.initializer" class="%sylius.rbac.initializer.class%">
@@ -96,7 +97,7 @@
             <argument>%sylius.model.role.class%</argument>
             <tag name="form.type"/>
         </service>
-        
+
     </services>
 
 </container>

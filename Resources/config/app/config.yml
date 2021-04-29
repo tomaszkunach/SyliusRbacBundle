@@ -1,3 +1,5 @@
-parameters:
-    sylius.cache:
-        type: file_system
+framework:
+    cache:
+        pools:
+            sylius.rbac.permissions_cache_pool:
+                adapter: cache.adapter.filesystem
