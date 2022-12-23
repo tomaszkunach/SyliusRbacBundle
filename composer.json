@@ -3,34 +3,33 @@
     "type": "symfony-bundle",
     "description": "Symfony2 Role-Based-Access-Control",
     "keywords": ["security", "rbac", "roles", "permissions"],
-    "homepage": "http://sylius.org",
+    "homepage": "https://sylius.org",
     "license": "MIT",
     "authors": [
         {
             "name": "Paweł Jędrzejewski",
-            "homepage": "http://pjedrzejewski.com"
+            "homepage": "https://pjedrzejewski.com"
         },
         {
             "name": "Sylius project",
-            "homepage": "http://sylius.org"
+            "homepage": "https://sylius.org"
         },
         {
             "name": "Community contributions",
-            "homepage": "http://github.com/Sylius/Sylius/contributors"
+            "homepage": "https://github.com/Sylius/Sylius/contributors"
         }
     ],
     "require": {
-        "php": "^7.4",
-
+        "php": "^7.4 || ^8.0",
         "admin-platform/rbac": "^1.0",
         "sylius/resource-bundle": "^1.0",
-        "symfony/framework-bundle": "^5.0",
-        "symfony/cache": "^5.0"
+        "symfony/framework-bundle": "^5.0 || ^6.0",
+        "symfony/cache": "^5.0 || ^6.0"
     },
     "require-dev": {
         "phpspec/phpspec": "^3.0|^7.0",
-        "doctrine/orm": "~2.5.0|~2.8.0",
-        "symfony/form": "^5.0",
+        "doctrine/orm": "~2.5.0|~2.8",
+        "symfony/form": "^5.0 || ^6.0",
         "twig/twig": "^1.0|^2.0"
     },
     "config": {
