@@ -83,8 +83,8 @@
         </service>
 
         <service id="sylius.command.initialize" class="%sylius.rbac.command.initialize.class%">
-            <argument>null</argument>
             <argument type="service" id="sylius.rbac.initializer" />
+            <argument>null</argument>
             <tag name="console.command" />
         </service>
 

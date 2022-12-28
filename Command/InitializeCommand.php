@@ -31,7 +31,7 @@ class InitializeCommand extends Command
      * @param null|string $name
      * @param RbacInitializer $rbacInitializer
      */
-    public function __construct(?string $name = null, RbacInitializer $rbacInitializer)
+    public function __construct(RbacInitializer $rbacInitializer, string $name = null)
     {
         parent::__construct($name);
         $this->rbacInitializer = $rbacInitializer;
