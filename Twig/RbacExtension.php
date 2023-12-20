@@ -12,13 +12,15 @@
 namespace Sylius\Bundle\RbacBundle\Twig;
 
 use Sylius\Bundle\RbacBundle\Templating\Helper\RbacHelper;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * Sylius RBAC Twig helper.
  *
  * @author Paweł Jędrzejewski <pawel@sylius.org>
  */
-class RbacExtension extends \Twig_Extension
+class RbacExtension extends AbstractExtension
 {
     /**
      * @var RbacHelper
@@ -39,7 +41,7 @@ class RbacExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('sylius_is_granted', [$this, 'isGranted']),
+            new TwigFunction('sylius_is_granted', [$this, 'isGranted']),
         ];
     }
 
